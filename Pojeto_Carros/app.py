@@ -8,9 +8,7 @@ st.sidebar.image("logo.png")
 st.sidebar.write("Boa Tarde. Escolha o seu carro para alugar com a melhor empresa do país")
 st.markdown('---')
 
-
 carros = ["Civic", "BMW", "Ford Focus", "Audi A8", "Volkswagen", "Ford Fiesta 2012"]
-
 
 precos = {
     "Civic": 245,
@@ -99,5 +97,6 @@ if st.button("Calcular"):
         if seguro: extras.append("seguro")
         if lavagem: extras.append("lavagem")
         extras_msg = f" incluindo {', '.join(extras)}" if extras else ""
+
 
         st.success(f"Você alugou o {carro_escolhido} por {dias} dias{extras_msg}, rodou {km} km. Valor total: R$ {aluguel:.2f}")
